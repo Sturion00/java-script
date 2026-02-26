@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Script</title>
+    <style>
+        body {
+            background-color: lightpink;
+            color: crimson;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Bora aprender essa poha!</h1>
+    <script>
+        var n1 = Number(window.prompt('Digite o primeito número: '))
+        var n2 = Number(window.prompt('Digite outro número: ')) // window.alert() Usado para mostrar um alerta na tela.
+
+        var produto = n1 * n2
+
+        var nome = window.prompt('Qual seu nome?')
+
+        document.write(`Ola, ${nome}! seu nome tem ${nome.length} letras. <br><br>`) //document.write Usado para escrever no documento
+    
+        document.write(`O valor da multiplicação é ${produto.toFixed(2).replace(".", ",")}. <br><br>`) // Metodo disponivel para Numbers --> to.fidex(x)[valor de quanta casas decimais] .replace()[o que será subs. / Valor substituto]
+
+        
+
+    </script>
+</body>
+</html>
