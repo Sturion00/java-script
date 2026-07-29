@@ -17,10 +17,23 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quidem quae. Labore quam, dolores commodi assumenda autem nisi optio illo tempore voluptate hic aliquid mollitia illum, est, libero possimus similique.
     </p>
     <script>
-        // Comando para comentários
-        window.alert('Minha primeira mensagem');
-        window.confirm('Vai ou não?');
-        window.prompt('Qual seu nome?');
+        //
+        //var nome = prompt('Qual o seu nome?')
+        //window.alert('Bem vindo ' + nome + '!')
+
+        //Declaração de variáveis; conversão de STRING para INT e operação de soma
+        //var num1 = Number.parseInt(window.prompt('Digite um número:'))
+        //var num2 = Number.parseInt(window.prompt('Digite outro número:'))
+        //window.alert(num1 + num2)
+
+        //Declaração de variáveis; conversão de STRING para NUMBER e operação de soma
+        var num1 = Number(window.prompt('Digite um número:'))
+        var num2 = Number(window.prompt('Digite outro número:'))
+        var soma = num1 + num2
+
+        //Conversão de INT para STRING
+        //Utilização da Crase (`) para interpolar e PlaceHolder
+        window.alert(`A soma entre ${num1} e ${num2} é ${soma}`)
 
     </script>
 </body>
