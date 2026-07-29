@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(6, 14, 41);
+            color: rgb(255, 255, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Mais um teste</h1>
+    <p>Bora!</p>
+
+    <script>
+        // Uso de escrita no documento, atributos dentro de PlaceHolders
+        var nome = window.prompt('Qual o nome?')
+        document.write(`Olá ${nome}, seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em letras Maiusculas ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em letras Minusculas ${nome.toLowerCase()}<br><br>`)
+
+        // Formatação de numeros int; teste de formatação de moeda por região
+        var num1 = 1545.5
+        document.write(`Teste de conversão de numeros ${num1.toFixed(2)}<br>`)
+        document.write(`Teste de formatação de Moeda ${num1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`)
+
+    </script>
+</body>
+</html>
