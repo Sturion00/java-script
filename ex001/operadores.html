@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: in;
+            background-color: rgb(34, 34, 34);
+            color: aliceblue;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.3em;
+            justify-items: center;
+        }
+
+        header {
+            display: block;
+            width: 85%;
+            border: 2px solid rgb(15, 148, 236);
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        section.parte-1 {
+            display: flex;
+            width: 85%;
+            justify-content: space-around;
+            border: 2px solid rgb(15, 148, 236);
+            padding: 15px 0 15px 0;
+        }
+
+        section.parte-2 {
+
+            width: 85%;
+            justify-content: center;
+            border: 2px solid rgb(15, 148, 236);
+            padding: 15px 0 15px 0;
+            justify-items: center;
+        }
+        h3 {
+            padding-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Operadores Js</h1>
+    </header>
+
+    <section class="parte-1">
+        <article class="descricao">
+            Soma: + <br>
+            Subtração: - <br>
+            Multiplicaçao: * <br>
+            Divisão: / <br>
+            Resto da D: % <br>
+            Potenciação: ** <br>
+        </article>
+        <br><br>
+        <article class="operacao">
+            <script>
+                // A incserção de strings pode ser feita com aspas simples.
+                document.writeln(`8 + 4 — ` + `8 + 4 = ` + parseInt(8+4) + `<br>`)
+                document.writeln(`8 - 4 — ` + '8 - 4 = ' + parseInt(8-4) + `<br>`)
+                document.writeln(`8 * 4 — ` + '8 × 4 = ' + parseInt(8*4) + `<br>`)
+                document.writeln(`8 / 4 — ` + '8 ÷ 4 = ' + parseInt(8/4) + `<br>`)
+                document.writeln(`8 % 4 — ` + '8 r 4' + parseInt(8%4) + `<br>`)
+                document.writeln(`8 ** 4 — ` + '8<sup>4</sup> = ' + parseInt(8**4) + `<br>`)
+            </script>
+        </article>
+    </section>
+    <section class="parte-2">
+        <h3>Operadores de Atribuição</h3>
+        <article class="op-atribuicao">
+            <p>
+                var n = 3 <br><br>
+                n = n + 4 ---> n += 4 <br>
+                n = n - 5 ---> n -= 5<br>
+                n = n * 4 ---> n *= 4<br>
+                n = n / 2 ---> n /= 2<br>
+                n = n ** 2 ---> n **= 2<br>
+                n = n % 5 ---> n %= 5<br><br>
+                <script>
+                    var n = 3
+                    n += 4
+                    n -= 5
+                    n *= 4
+                    n /= 2
+                    n **= 2
+                    n %= 5
+                    document.write('Resultado: ' + Number(n %= 4) )
+                </script>
+            </p>
+        </article>
+    </section>
+    <section class="parte-3">
+        <h3>Operadores de Incremento</h3>
+        <article class="op-incremento">
+            <p>var n2 = 10 <br><br></p>
+            <Ul>
+                <li>Pré-incremento ++n2</li>
+                <li>Pós-incremento n2++</li>
+                <li>Pré-decrimento --n2</li>
+                <li>Pós-decrimento n2--</li>
+            </Ul>
+            <br>
+            <span>
+                <script>
+                    n2 = 10
+
+                    document.write(++n2 + '<br>')
+                    document.write(n2++ + '<br>')
+                    document.write(--n2 + '<br>')
+                    document.write(n2-- + '<br>')
+                </script>
+            </span>
+
+        </article>
+    </section>
+    
+</body>
+</html> 
