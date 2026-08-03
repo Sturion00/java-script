@@ -62,97 +62,113 @@
 </head>
 <body>
     <h1>Teste com mais operadores</h1>
-    <section class="apresentacao" id="conteudo">
-        <h2>Operadores Relacionais</h3>
-        <p>Todo resultado destes operadors retorna valores booleanos <strong>(TRUE; FALSE)</strong></p>
-        <div>
-            <script>
-                document.write(`É maior? 5 > 2 = ${5>2} <br>`)
-                document.write(`É menor? 7 > 4 = ${7<4} <br>`)
-                document.write(`É maior ou igual? 8 >= 8 = ${8>=8} <br>`)
-                document.write(`É menor ou igual? 9 <= 7 = ${9==7} <br>`)
-                document.write(`É igual? 5 == 5 = ${5==5} <br>`)
-                document.write(`É diferente? 4 != 4 = ${4!=4} <br>`)
-            </script>
-        </div>
-        <h3>--> Também com variáveis</h3>
-        <p>Declaração de variáveis: <br></p>
-        <article>
-            <div id="variaveis">
-                var a = 10 <br>
-                var a = 15
-            </div>
-            <script>
-                a = 10
-                b = 15
-                document.write(`a > b = ${a>b} <br>`)
-                document.write(`a < b = ${a<b} <br>`)
-                document.write(`a / b >= 1 = ${a/b >= 1} <br>`)
-                document.write(`a == b = ${a==b} <br>`)
-                document.write(`a + b = 20? = ${a+b==20} <br>`)
-                document.write(`(a - b) * (a + b) = -125? = ${(a+b)*(a-b) == -125} <br>`)
-            </script>
-        </article>
-    </section>
-    <section class="identidade" id="conteudo">
-        <h2>Operadores de Identidade</h2>
-        <p>Estes comparam o tipo e natureza dos dados. Ex: strings</p>
-        <article>
-            <div id="variaveis"">
-                Variáveis: <br>
-                x = 5 <br>
-                y = 5 <br>
-            </div>
-            <script>
-                x = 5
-                y = '5'
-                document.write(`Qual o tipo de x? - ${typeof x} <br>`)
-                document.write(`Qual o tipo de y? - ${typeof y} <br>`)
-                document.write(`É igual? - x == y? - ${x == y} <br>`)
-                document.write(`É identico? x === y - ${x === y} <br>`)
-                document.write(`É dirente? x != y - ${x != y} <br>`)
-                document.write(`É desigual restrito? x !== y - ${x !== y} <br>`)
-            </script>
-        </article>
-    </section>
-    <section class="logicos" id="conteudo">
-        <h2>Operadores Lógicos</h2>
-        <article>
+    <main>
+        <section class="apresentacao" id="conteudo">
+            <h2>Operadores Relacionais</h3>
+            <p>Todo resultado destes operadors retorna valores booleanos <strong>(TRUE; FALSE)</strong></p>
             <div>
-                var a = 5 <br>
-                var b = 8 <br><br>
-                <ul>
-                    <li>! - Negação</li>
-                    <li>&& - Conjunção "E"</li>
-                    <li>|| - Disjunção "OU"</li> <br>
-                </ul>
-                <strong>Ordem de hierarquia. EX:</strong> <br>
-                Aritimetico > relacional > Lógico <br>
-                A > B && b % 2 == 0 <br><br>
+                <script>
+                    document.write(`É maior? 5 > 2 = ${5>2} <br>`)
+                    document.write(`É menor? 7 > 4 = ${7<4} <br>`)
+                    document.write(`É maior ou igual? 8 >= 8 = ${8>=8} <br>`)
+                    document.write(`É menor ou igual? 9 <= 7 = ${9==7} <br>`)
+                    document.write(`É igual? 5 == 5 = ${5==5} <br>`)
+                    document.write(`É diferente? 4 != 4 = ${4!=4} <br>`)
+                </script>
             </div>
-            <script>
-                a = 5
-                b = 8
-                document.write(`<strong>*Script*</strong><br>`)
-                document.write(`Negação (!) > Conjunção (&&) > Disjunção (||) <br>`)
-                document.write(`a > a && b % 2 == 0  ---> ${a > b && b % 2 == 0} <br>`)
-            </script>
-        </article>
-    </section>
-    <section class="precendencia" id="conteudo">
-        <h2>Ordem de Precedência</h2>
-        <div>
-            <ul>
-                <li>Aritiméticos (+, -, *, /, **, %)</li>
-                <li>Relacionais(>, <, ==, >=, <=, !=)</li>
-                <li>Lógicos
-                    <li style="padding-left: 10px;">Negação(! - NÃO)</li>
-                    <li style="padding-left: 10px;">Conjunção(&& - E)</li>
-                    <li style="padding-left: 10px;"> Disjunção(|| - OU)</li>
-                </li>
-            </ul>
-        </div>
-    </section>
+            <h3>--> Também com variáveis</h3>
+            <p>Declaração de variáveis: <br></p>
+            <article>
+                <div id="variaveis">
+                    var a = 10 <br>
+                    var a = 15
+                </div>
+                <script>
+                    a = 10
+                    b = 15
+                    document.write(`a > b = ${a>b} <br>`)
+                    document.write(`a < b = ${a<b} <br>`)
+                    document.write(`a / b >= 1 = ${a/b >= 1} <br>`)
+                    document.write(`a == b = ${a==b} <br>`)
+                    document.write(`a + b = 20? = ${a+b==20} <br>`)
+                    document.write(`(a - b) * (a + b) = -125? = ${(a+b)*(a-b) == -125} <br>`)
+                </script>
+            </article>
+        </section>
+        <section class="identidade" id="conteudo">
+            <h2>Operadores de Identidade</h2>
+            <p>Estes comparam o tipo e natureza dos dados. Ex: strings</p>
+            <article>
+                <div id="variaveis"">
+                    Variáveis: <br>
+                    x = 5 <br>
+                    y = 5 <br>
+                </div>
+                <script>
+                    x = 5
+                    y = '5'
+                    document.write(`Qual o tipo de x? - ${typeof x} <br>`)
+                    document.write(`Qual o tipo de y? - ${typeof y} <br>`)
+                    document.write(`É igual? - x == y? - ${x == y} <br>`)
+                    document.write(`É identico? x === y - ${x === y} <br>`)
+                    document.write(`É dirente? x != y - ${x != y} <br>`)
+                    document.write(`É desigual restrito? x !== y - ${x !== y} <br>`)
+                </script>
+            </article>
+        </section>
+        <section class="logicos" id="conteudo">
+            <h2>Operadores Lógicos</h2>
+            <article>
+                <div>
+                    var a = 5 <br>
+                    var b = 8 <br><br>
+                    <ul>
+                        <li>! - Negação</li>
+                        <li>&& - Conjunção "E"</li>
+                        <li>|| - Disjunção "OU"</li> <br>
+                    </ul>
+                    <strong>Ordem de hierarquia. EX:</strong> <br>
+                    Aritimetico > relacional > Lógico <br>
+                    A > B && b % 2 == 0 <br><br>
+                </div>
+                <script>
+                    a = 5
+                    b = 8
+                    document.write(`<strong>*Script*</strong><br>`)
+                    document.write(`Negação (!) > Conjunção (&&) > Disjunção (||) <br>`)
+                    document.write(`a > a && b % 2 == 0  ---> ${a > b && b % 2 == 0} <br>`)
+                </script>
+            </article>
+        </section>
+        <section class="precendencia" id="conteudo">
+            <h2>Ordem de Precedência</h2>
+            <div>
+                <ul>
+                    <li>Aritiméticos (+, -, *, /, **, %)</li>
+                    <li>Relacionais(>, <, ==, >=, <=, !=)</li>
+                    <li>Lógicos
+                        <li style="padding-left: 10px;">Negação(! - NÃO)</li>
+                        <li style="padding-left: 10px;">Conjunção(&& - E)</li>
+                        <li style="padding-left: 10px;"> Disjunção(|| - OU)</li>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="ternario" id="conteudo">
+            <h2>Operadores ternários (=se[excel])</h2>
+            <article>
+                <div>
+                    <strong>Condicional com função =Se( ) Excel</strong> <br>
+                    <div style="padding: 5px;"><i>teste_logico</i> ? <i>'valor-se-verdadeiro</i>' : <i>'valor-se-falso'</i></div>
+                </div>
+                <script>
+                    nota = prompt('Qual sua nota?')
+                    resultado = 7
+                    nota >= resultado ? document.write('Aprovado') : document.write('Reprovado')
+                </script>
+            </article>
+        </section>
+    </main>
 </body>
 
 </html>
