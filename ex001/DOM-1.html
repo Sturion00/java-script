@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: rgb(49, 49, 51);
+            color: rgb(177, 155, 122);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        #titulo {
+            text-align: center;
+        }
+
+        #subtitulo {
+            text-align: center;
+            margin-top: -20px;
+            color: rgb(117, 106, 90);
+        }
+
+        article {
+            background-color: rgb(46, 46, 46);
+            border-radius: 10px;
+            width: 90vw;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        div#exemplos{
+            width: 400px;
+            background-color: rgb(41, 41, 41);
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        div.fim {
+            text-align: center;
+            border-bottom: 2px solid;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="titulo">Começo dos Estudos com <strong>DOM</strong></h1>
+        <section class="part-1">
+            <article>
+                <div id="exemplos"">
+                <p>Bora!!</p>
+                <p>Teste de getElemente()-1</p>
+                    <p>Teste de getElemente()-2</p>
+                </div>
+                <p>
+                    Dom é um Sigla para <strong>"Document Object Model"</strong> <br>
+                    Ele roda no navegador, não funciona no Node.js <br><br>
+                    <strong>Tipos de Acesso a arvore DOM</strong> <br>
+                    <ul>
+                        <li>Marca</li>
+                        <li>ID</li>
+                        <li>Nome</li>
+                        <li>Classe</li>
+                        <li>Seletor</li>
+                    </ul>
+                </p>
+                <div class="fim" id="mensagem">
+                    --Clique em Mim-- <br><br>
+                </div>
+            </article>
+        </section>
+
+        <h1 id="titulo">_Script</h1>
+        <h2 id="subtitulo"><i>getElementeByTagName()</i></h2>
+        <section class="part-2">
+            <article>
+                <script>
+                p1 = document.getElementsByTagName('p')[0]
+                ul = document.getElementsByTagName('ul')[0]
+                    p3 = document.getElementsByTagName('p')[3]
+                    document.write(`Está escrito assim: ${p1.innerText} <br><br>`)
+                    document.write(p3.innerHTML)
+                    document.write(ul.innerHTML)
+                </script>
+            </article>
+        </section>
+        <section class="part-3">
+            <h2 id="titulo"><i>getElementById()</i></h2>
+            <article>
+                <p style="border-left: 2px solid green; padding-left: 5px; border-radius: 5px;">*Aplicando efeitos ao botão "Clique em Mim": cor e texto*</p>
+                <script>
+                msg = document.getElementById('mensagem')
+
+                msg.style.background = 'green'
+                msg.innerText = 'Aguarde...'
+                </script>
+            </article>
+        </section>
+        <section>
+            <h2 id="titulo">Acesso por Seletor</h2>
+            <h3 id="subtitulo"><i>querySelector()</i></h3>
+            <article>
+                <p>querySelector()</p>
+                <p>querySelectorAll()</p>
+                <p style="border-left: 2px solid green; padding-left: 5px; border-radius: 5px;"><strong>*Alteração da "Ul"*</strong></p>
+                <script>
+                    qry = document.querySelector('ul')
+
+                    qry.style.background = 'rgb(41, 41, 41)'
+                </script>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
