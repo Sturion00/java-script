@@ -87,12 +87,21 @@
                     document.write(p3.innerHTML)
                     document.write(ul.innerHTML)
                 </script>
+                <p>*** <i>Texto acima sem formatação adequada pois foi puxado através do <strong>getElemente()</strong>.***</i></p>
             </article>
         </section>
         <section class="part-3">
             <h2 id="titulo"><i>getElementById()</i></h2>
             <article>
                 <p style="border-left: 2px solid green; padding-left: 5px; border-radius: 5px;">*Aplicando efeitos ao botão "Clique em Mim": cor e texto*</p>
+                <ul>
+                    <li>
+                        <p><i><strong>getElementeByClass()</strong></i> segue a mesma linha da <i><strong>getElementeById()</strong></i></p>
+                    </li>
+                    <li>
+                        <p><i><strong>getElementeByName()</strong></i> - A tag < name > é mais utilizada no servido fazerndo parte dos formularios, a tag < id > é a recomendação para ela.</p>
+                    </li>
+                </ul>
                 <script>
                 msg = document.getElementById('mensagem')
 
@@ -101,7 +110,7 @@
                 </script>
             </article>
         </section>
-        <section>
+        <section class="part-4">
             <h2 id="titulo">Acesso por Seletor</h2>
             <h3 id="subtitulo"><i>querySelector()</i></h3>
             <article>
