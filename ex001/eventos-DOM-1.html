@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM 1</title>
+    <style>
+        body {
+            background-color: rgb(32, 32, 32);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(73, 69, 64);
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            font-size: larger;
+            background-color: rgb(197, 150, 88);
+            width: 300px;
+            height: 300px;
+            line-height: 50vw;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 20PX;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Ações declaradas in-line, mas pode ser feito dentro do espaço de Scrip através dos linsteners -->
+    <!-- <div id="botao" onclick="clicar()" onmouseenter="entrar()" onmouseleave="saiu()">  -->
+        
+    <div id="botao">
+        CLIQUE EM MIM
+    </div>
+    <script>
+        botao = document.getElementById('botao')
+
+        botao.addEventListener('click', clicou)
+        botao.addEventListener('mouseenter', entrou)
+        botao.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            botao.innerText = 'clicou'
+            botao.style.background = 'grey '
+        }
+
+        function entrou() {
+            botao.innerText = 'entrou'
+        }
+
+        function saiu() {
+            botao.innerText = 'saiu'
+            botao.style.background = 'rgb(197, 150, 88)'
+        }
+    </script>
+</body>
+</html>
