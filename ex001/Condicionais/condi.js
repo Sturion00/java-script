@@ -1,5 +1,7 @@
-vel = 60.5
+vel = 40
 console.log(`A velocidade do seu carro é ${vel}km/h`)
-if
+if (vel > 60) {
+    console.log('Multado')
+}
 console.log('Dirija sempre com cinto')
 
