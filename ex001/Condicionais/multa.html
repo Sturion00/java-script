@@ -9,31 +9,55 @@
             background-color: rgb(27, 27, 27);
             color: rgb(170, 170, 170);
         }
+
+        article {
+            margin-bottom: 40px;
+        }
+
     </style>
 </head>
 <body>
     <article>
         <h1>Sistema de confência de multas</h1>
 
-        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h. <br><br>
+        Velocidade do carro: <input type="number" name="txtvel" placeholder="Valor..." id="txtvel"> Km/h. <br><br>
         <input type="button" value="VERIFICAR" onclick="calcular()">
 
-        <div id="resultado">
+        <div id="resultado"></div>
 
-        </div>
-
-    </article>
-    <script>
-        function calcular() {
-            txtv = document.getElementById('txtvel')
-            resultado = document.querySelector('div#resultado')
-            vel = Number(txtv.value)
-            resultado.innerHTML = `<p>Sua velocidade é de ${vel} Km/h</p>`
-            if (vel > 60) {
-                resultado.innerHTML += '<p>Você foi multado</p>'
+        <script>
+            function calcular() {
+                txtv = document.getElementById('txtvel')
+                resultado = document.querySelector('div#resultado')
+                vel = Number(txtv.value)
+                resultado.innerHTML = `<p>Sua velocidade é de ${vel} Km/h</p>`
+                if (vel > 60) {
+                    resultado.innerHTML += '<p>Você foi multado</p>'
+                }
+                resultado.innerHTML += `<p>Dirija sempre com cinto de Segurança</p>`
             }
-            resultado.innerHTML += `<p>Dirija sempre com cinto de Segurança</p>`
-        }
-    </script>
+            </script>
+    </article>
+    <article>
+        <h1>Verificador de Nacionalidade</h1>
+
+        Em qual país você nasceu <input type="text" name="txtps" id="txtps"> <br><br>
+        <input type="button" value="VERIFICAR" onclick="verificar()">
+
+        <div id="resposta"></div>
+
+        <script>
+            function verificar() {
+                txtpais = document.getElementById('txtps').value
+                resposta = document.querySelector('div#resposta')
+                
+                if (txtpais.toLowerCase() == 'brasil') {
+                    resposta.innerHTML = '<p>Vc brasileiro</p>'
+                } else {
+                    resposta.innerHTML = '<p>Vc é extrangeiro</p>'
+                }
+            }
+        </script>
+    </article>
 </body>
 </html>
