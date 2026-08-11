@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicios</title>
+    <title>Hora do dia</title>
     <style>
         * {
             margin: 0;
@@ -22,19 +22,19 @@
 
         h1 {
             text-align: center;
-            color: rgb(48, 46, 43);
+            color: rgb(255, 255, 255);
         }
 
         h3 {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-style: italic;
             text-align: center;
-            color: rgb(85, 81, 74);
+            color: rgb(255, 255, 255);
         }
 
         section {
-            background-color: rgb(167, 159, 146);
-            width: 700px;
+            background-color: rgb(255, 255, 255);
+            width: 600px;
             height: 500px;
             margin: auto;
             padding: 2%;
@@ -43,16 +43,23 @@
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.308);
         }
-
+        
         article {
-            font-weight: bolder;
+            font-size: 1.5em;
+            font-weight: 500;
         }
+        
+        article#texto {
 
+        }
+        
         img {
-            width: 300px;
-            height: 300px;
+            width: 350x;
+            height: 350px;
             border-radius: 50%;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.486);
         }
 
         footer {
@@ -62,20 +69,18 @@
         
         </style>
 </head>
-<body>
+<body onload="carregar()">
     <main>
         <header>
             <h1>Exercicio_1</h1>
             <h3>Interativiade com a hora local</h3>
         </header>
         <section>
-            <article>
-                <p>
-                    Falta 15 pra daqui a pouco
-                </p>
+            <article id="texto">
+                
             </article>
             <article id="img">
-                <img src="" alt="">
+                <img id="foto" src="imgens/manha.jpg" alt="Manhã">
             </article>
         </section>
     </main>
