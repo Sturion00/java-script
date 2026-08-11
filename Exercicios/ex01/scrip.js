@@ -2,8 +2,8 @@ function carregar() {
     var texto = document.querySelector('article#texto')
     var foto = document.getElementById('foto')
     var data = new Date()
-    hora = 15
-    //var hora = data.getHours()
+    //hora = 18
+    var hora = data.getHours()
     texto.innerHTML = `Agora são ${hora}h00 horas. <br>`
     if (hora >= 5 && hora < 12) {
         //Bom dia!
