@@ -36,7 +36,7 @@
         section {
             background-color: rgb(238, 252, 253);
             width: 600px;
-            height: 500px;
+            height: auto;
             margin: auto;
             padding: 2%;
             border-radius: 25px;
@@ -54,6 +54,10 @@
         
         article#texto {
             text-align: center;
+        }
+
+        article#saida {
+            margin-top: 20px;
         }
         
         img {
@@ -78,18 +82,32 @@
             <h3>Verificador de Idade</h3>
         </header>
         <section>
-            <article>
-                
+            <article id="entrada">
+                <p>
+                    Ano de Nascimento:<br>
+                    <input style="width: 230px;" type="number" name="txtano" id="txtano" placeholder="1920-2026" min="1920" max="2026">
+                </p>
+                <p>
+                    Sexo: <br>
+                    <input type="radio" name="radsex" id="mas" checked>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
             </article>
-            <article>
+            <article id="saida">
+                <p>
+                    
+                </p>
             </article>
         </section>
     </main>
     <footer>
         <p>&copy; Curso em Vídeo.</p> 
     </footer>
-    <script>
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
