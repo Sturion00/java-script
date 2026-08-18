@@ -37,6 +37,36 @@
             margin: 20px;
         }
 
+        article#input {
+            
+        }
+
+        article#input>p  {
+            margin: 10px;
+        }
+
+        article#output>p {
+            margin: 10px;
+        }
+
+        input {
+            text-align: center;
+            width: 100px;
+            padding: 2px;
+            border-radius: 7px;
+            background-color: rgb(94, 59, 43);
+            color: rgb(202, 211, 211);
+        }
+        input#press {
+            background-color: rgb(71, 45, 33);
+            border-radius: 4px;
+        }
+
+        article#output {
+            margin-top: 10px;
+        }
+
+
         footer {
             text-align: center;
             color: rgb(128, 76, 52);
@@ -45,19 +75,25 @@
     </style>
 </head>
 <body>
-    <h1>CONDICIONAIS</h1>
+    <h1>Contador com Condicionais</h1>
     <main>
         <Section>
-            <article>
-
+            <article id="input">
+                <h3>Defina os dados:</h3>
+                <p>Inicio: <input type="number" name="txti" id="txti"></p>
+                <p>Fim: <input type="number" name="txtf" id="txtf"></p>
+                <p>Razão:  <input type="number" name="txtr" id="txtr"></p>
+                <p><input style="margin-top: 10px;" type="button" value="CALCULAR" id="press" onclick="calcular()"></p>
             </article>
-            <article>
-
+            <h3>Resultado:</h3>
+            <article id="output">
+                <p><i>_esprando valores_</i></p>
             </article>
         </Section>
     </main>
     <footer>
         <p>&copy Curso em Vídeo 2026.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
