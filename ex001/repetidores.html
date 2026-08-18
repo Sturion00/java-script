@@ -70,8 +70,8 @@
                         <p>var contador = 1</p><br>
 
                         <p>while (contador <= 5) {</p>
-                        <p>console.log('Hellow, World')</p>
-                        <p>contador++</p>
+                        <p style="text-indent: 30px;">console.log('Hellow, World')</p>
+                        <p style="text-indent: 30px;">contador++</p>
                         <p>}</p><br>
                         <p>**Esse scrip repete a mensagem no console 5 vezes até o contador <STRONg>ENQUNATO</STRONg> ele for menor ou igual 5.</p>
                     </div>
@@ -80,17 +80,29 @@
                         <p>Declaração de variaveis:</p><br>
                         <p>var contador2 = 1</p><br>
 
-                        <p>while (contador2 <= 5) {</p>
-                        <p>console.log('Hellow, World')</p>
-                        <p>contador++</p>
-                        <p>}</p><br>
-                        <p>**Esse scrip repete a mensagem no console 5 vezes até o contador <STRONg>ENQUNATO</STRONg> ele for menor ou igual 5.</p>
+                        <p>do {</p>
+                        <p style="text-indent: 30px;">console.log('Hellow, World')</p>
+                        <p style="text-indent: 30px;">contador2++</p>
+                        <p>} while (contador2 <= 5)</p><br>
+                        <p>**Esse script executa ação e <strong>DEPOIS</strong> acrescenta +1 ao contador e repete <strong>ENQUANTO</strong> ele for menor ou igual a 5.</p>
                     </div>
             </article>
         </section>
     </main>
     <footer style="text-align: center; margin: 20px; color: white;">&copy Guilherme Augusto</footer>
     <script>
+        n = 1
+        j = 10
+
+        while (n <= 5 ) {
+            console.log(`Opa, ${n}`)
+            n++
+        }
+
+        do {
+            console.log(`bão ${j}`)
+            j++
+        } while (j <= 15 )
 
     </script>
 </body>
