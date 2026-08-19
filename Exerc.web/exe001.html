@@ -35,8 +35,8 @@
     </div>
     <script>
         function calcular() {
-            let num = document.getElementById('txtn').value
-            let des = document.getElementById('txtd').value
+            let num = Number(document.getElementById('txtn').value)
+            let des = Number(document.getElementById('txtd').value)
             let pDes = des / 100
             let saida = document.getElementById('saida')
 
@@ -46,12 +46,12 @@
             if (num == 0) {
                 alert('Digite um Número primeiro...')
             } else {
-                saida.innerHTML = `R$${num},0 com ${des}% de desconto são ${num - (num * pDes)}`
+                saida.innerHTML = `R$ ${num},0 com ${des}% de desconto são ${num - (num * pDes)}`
             }
         }
 
         function limpar() {
-
+            
         }
     </script>
 </body>
