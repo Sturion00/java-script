@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(7, 0, 0, 0.90);
+            color: rgb(202, 211, 211);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            background-color: rgb(83, 51, 38);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.281);
+            width: 500px;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        article#input {
+            
+        }
+
+        article#input>p  {
+            margin: 10px;
+            text-align: center;
+        }
+
+        article#output>p {
+            margin: 10px;
+        }
+
+        input {
+            text-align: center;
+            width: 100px;
+            padding: 2px;
+            border-radius: 7px;
+            background-color: rgb(94, 59, 43);
+            color: rgb(202, 211, 211);
+        }
+        input#press {
+            background-color: rgb(71, 45, 33);
+            border-radius: 4px;
+        }
+
+        article#output {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        select {
+            background-color: rgb(100, 63, 45);
+            color: rgb(202, 211, 211);
+            overflow: hidden;
+        }
+
+        footer {
+            text-align: center;
+            color: rgb(128, 76, 52);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <main>
+        <Section>
+            <article id="input">
+                <p>Qual tabuada?<input type="number" name="num" id="txtn"></p>
+                <p><input type="button" value="Gerar" onclick="tabuada()"></p>
+            </article>
+            <h3>Resultado:</h3>
+            <article id="output">
+                <select name="tabuada" id="seltab" size="10">
+                    <option value="">Digite um Número acima</option>
+                </select>
+            </article>
+        </Section>
+    </main>
+    <footer>
+        <p>&copy Curso em Vídeo 2026.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
