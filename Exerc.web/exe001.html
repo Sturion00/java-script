@@ -39,14 +39,18 @@
             let des = Number(document.getElementById('txtd').value)
             let pDes = des / 100
             let saida = document.getElementById('saida')
+            let res = num-(num*pDes)
 
             //alert(num)
             //alert(des)
+            //alert(res.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
 
             if (num == 0) {
                 alert('Digite um Número primeiro...')
             } else {
-                saida.innerHTML = `R$ ${num},0 com ${des}% de desconto são ${num - (num * pDes)}`
+                //Funciona tbm, mas são 2 comandos diferentes
+                //saida.innerHTML = `${num.toFixed(2).replace('.', ',')} com ${des}% de desconto são ${res.toFixed(2).replace('.', ',')}`
+                saida.innerHTML = `${num.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} com ${des}% de desconto são ${res.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
             }
         }
 
