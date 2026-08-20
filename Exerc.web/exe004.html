@@ -18,12 +18,38 @@
     </style>
 </head>
 <body>
-    <h1>Exercicio 4</h1>
+    <h1>Exercicio 3</h1>
     <div>
-        
+        <h2>Dias Vividos</h2>
+        <p>Ano de nascimento: <input type="number" name="txta" id="txta" min="1970" max="2026"></p>
+        <input type="button" value="CALCULAR" onclick="calcular()">
+    </div>
+    <div id="saida">
+        <p id="um"></p>
+        <p id="dois"></p>
     </div>
     <script>
+        function calcular() {
+           let ano = document.getElementById('txta').value
+           let atAno = new Date().getFullYear()
+           const dAno = Number(365)
+           let saida = document.querySelector('div#saida>p#um')
+           let saida2 = document.querySelector('div#saida>p#dois')
 
+           let res = (atAno - ano) * dAno
+           let res2 = atAno - ano
+        //    let res3 =
+        
+        alert(res2)
+           
+            if (ano < 1970 || ano > atAno) {
+                alert('Informe um ano válido')
+            } else {
+                saida.innerHTML = ` Você ja viveu ${res} dias.`
+                saida2.innerHTML = ``
+            }
+
+        }
     </script>
 </body>
 </html>
