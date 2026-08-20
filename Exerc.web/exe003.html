@@ -20,10 +20,28 @@
 <body>
     <h1>Exercicio 3</h1>
     <div>
-        
+        <h2>Dias Vividos</h2>
+        <p>Ano de nascimento: <input type="number" name="txta" id="txta"></p>
+        <input type="button" value="CALCULAR" onclick="calcular()">
+    </div>
+    <div id="saida">
+        <p></p>
     </div>
     <script>
+        function calcular() {
+           let ano = document.getElementById('txta').value
+           let atAno = new Date().getFullYear()
+           const dAno = Number(365)
+           let res = (atAno - ano) * dAno
+           let saida = document.querySelector('div#saida>p')
+           
+            if (ano == 0) {
+                alert('Informe o Ano de Nascimento')
+            } else {
+                saida.innerHTML = ` Você ja viveu ${res} dias.`
+            }
 
+        }
     </script>
 </body>
 </html>
