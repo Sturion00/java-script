@@ -25,23 +25,24 @@
         <input type="button" value="CALCULAR" onclick="calcular()">
     </div>
     <div id="saida">
-        <p></p>
+        <p class="um"></p>
+        <p class="dois"></p>
     </div>
     <script>
         function calcular() {
             const data = new Date(document.getElementById('txta').value).getTime()
+            //const data = new Date('2001-07-26').getTime()
             const agora = new Date().getTime()
-            let saida = document.querySelector('div#saida>p')
-            const tRes = agora - data
+            let saida1 = document.querySelector('div#saida>P.um')
+            let saida2 = document.querySelector('div#saida>P.dois')
+            const passo = agora - data
             
-            const ano = Math.floor(tRes / 1000 / 60 / 60 / 24 / 365)
-            const mes = (tRes - ano) / 1000 / 60 / 60 / 24
-            const dia = ''
+            const mAno = Math.floor(passo / 1000 / 60 / 60 / 24 / 365)
+            const mMes = Math.floor((passo - (mAno * 1000 * 60 * 60 * 24 * 365)) / 1000 / 60 / 60 / 24 / 30)
+            const mDia = Math.floor((passo - (mAno * 1000 * 60 * 60 * 24 * 365) - (mMes * 60 * 60 * 24 / 30)) / 1000 / 60 / 60 / 24)
 
-
-            alert(ano)
-
-            saida.innerHTML += `Já se passaram ${ano} anos, ${mes} meses e ${dia} dias.`
+            saida1.innerHTML = `Tempo passado em milisegundos: ${passo}<br>`
+            saida2.innerHTML += `Já se passaram ${mAno} anos, ${mMes} meses e ${mDia} dias.`
             
         }
     </script>
