@@ -30,6 +30,7 @@
     </div>
     <script>
         function calcular() {
+            /*
             const data = new Date(document.getElementById('txta').value).getTime()
             //const data = new Date('2001-07-26').getTime()
             const agora = new Date().getTime()
@@ -39,11 +40,18 @@
             
             const mAno = Math.floor(passo / 1000 / 60 / 60 / 24 / 365)
             const mMes = Math.floor((passo - (mAno * 1000 * 60 * 60 * 24 * 365)) / 1000 / 60 / 60 / 24 / 30)
-            const mDia = Math.floor((passo - (mAno * 1000 * 60 * 60 * 24 * 365) - (mMes * 60 * 60 * 24 / 30)) / 1000 / 60 / 60 / 24)
+            const mDia = 
 
             saida1.innerHTML = `Tempo passado em milisegundos: ${passo}<br>`
             saida2.innerHTML += `Já se passaram ${mAno} anos, ${mMes} meses e ${mDia} dias.`
-            
+            */
+           const nasci = new Date('2001-07-26')
+           const agora = new Date()
+           const Decor = agora - entra
+
+           alert(nasci)
+           alert(agora)
+           alert(decor)
         }
     </script>
 </body>
