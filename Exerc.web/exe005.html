@@ -18,12 +18,28 @@
     </style>
 </head>
 <body>
-    <h1>Exercicio 5</h1>
-    <div>
-        
+    <h1>Calculadora de consumo médio de Combustivel</h1>
+    <div class="entrada">
+        <p>Distância (Km): <input type="number" name="txtd" id="txtd"></p>
+        <p>Litros gastos: <input type="number" name="txtl" id="txtl"></p>
+        <p><input type="button" value="Enviar" onclick="calcular()"></p>
+    </div>
+    <div class="saida">
+        <p>--Informe os dados necessários--</p>
     </div>
     <script>
-
+        function calcular() {
+            const distancia = document.getElementById('txtd').value
+            const litros = document.getElementById('txtl').value
+            let media = litros / distancia
+            
+            if (distancia < 0 || litros < 0) {
+                alert('Informe os dados primeiro')
+            } else {
+                let saida = document.querySelector('div.saida>p')
+                saida.innerHTML = `O consumo por quilometro foi de ${media}`
+            }
+        }
     </script>
 </body>
 </html>
