@@ -15,8 +15,6 @@ function calcular() {
         meses += 12
     }
 
-    alert(anos)
-
     const saida = document.querySelector('div#saida>p.um')
     saida.innerHTML = `Você tem ${anos} anos, ${meses} meses e ${dias} dias.`
 }
