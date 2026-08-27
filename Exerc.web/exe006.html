@@ -19,11 +19,29 @@
 </head>
 <body>
     <h1>Exercicio 6</h1>
-    <div>
-        
+    <div class="entrada">
+        <p>Valor Bruto: <input type="number" name="txtv1" id="txtv1"></p>
+        <p>Valor com desconto: <input type="number" name="txtv2" id="txtv2"></p>
+        <p><input type="button" value="CALCULAR" onclick="calcular()"></p>
+    </div>
+    <div class="saida">
+        <p>
+            --Informe dos valores primeiro--
+        </p>
     </div>
     <script>
+        function calcular() {
+            const vBruto = Number(document.querySelector('div.entrada>p>input#txtv1').value)
+            const VDesc = Number(document.querySelector('div.entrada>p>input#txtv2').value)
+            let desconto = 100 - ((VDesc / vBruto) * 100)
 
+            if (!vBruto || !VDesc) {
+                alert('Informe os valores para calcular')
+            } else {
+                const saida = document.querySelector('div.saida>p')
+                saida.innerHTML = `O desconto aplicado foi de ${desconto.toFixed(2).replace('.', ',')}%.`
+            }
+        }
     </script>
 </body>
 </html>
