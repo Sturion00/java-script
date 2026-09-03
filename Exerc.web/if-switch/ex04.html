@@ -15,7 +15,7 @@
             color: rgb(126, 177, 122);
         }
         
-        h1 {
+        h1, div.relogio {
             color: rgb(209, 88, 44);
         }
         
@@ -33,10 +33,13 @@
     <div class="entrada">
         <p>Número 1: <input type="number" name="txtn1" id="txtn1"></p>
         <p>Número 2: <input type="number" name="txtn2" id="txtn2"></p>
-        <p><input type="button" value="ANALISAR" onclick="analisar()"></p>
+        <p><input type="button" value="LIMPAR" onclick="limpar()"> <input type="button" value="ANALISAR" onclick="analisar()"></p>
     </div>
     <div class="saida">
-        <p>--Digite um Número--</p>
+        <p>--Digite os Números--</p>
+    </div>
+    <div class="relogio">
+        <p>00:00:00</p>
     </div>
     <script src="scripts/script04.js"></script>
 </body>
