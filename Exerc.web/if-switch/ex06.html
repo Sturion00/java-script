@@ -30,12 +30,15 @@
 <body>
     <h1>Exercicios com IF e SWITCH</h1>
     <div class="entrada">
-        <p>Digite uma letra: <input type="text" name="txtl" id="txtl"></p>
-        <p><input type="button" value="ANALISAR" onclick="analisar()"></p>
+        <p>Informe os ângulos do triângulo</p>
+        <p>Ângulo 1: <input type="number" name="txt1" id="txt1" min="0" max="180"></p>
+        <p>Ângulo 2: <input type="number" name="txt2" id="txt2" min="0" max="180"></p>
+        <p>Ângulo 3: <input type="number" name="txt3" id="txt3" min="0" max="180"></p>
+        <p><input type="button" value="LIMPAR" onclick="limpar()"> <input type="button" value="ANALISAR" onclick="analisar(); vazio()"></p>
     </div>
     <div class="saida">
-        <p>--Digite uma letra--</p>
+        <p>--Informe os ângulos--</p>
     </div>
-    <script src="scripts/script01.js"></script>
+    <script src="scripts/script06.js"></script>
 </body>
 </html>
