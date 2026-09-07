@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if e Switch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(21, 27, 22);
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+            color: rgb(126, 177, 122);
+        }
+        
+        h1 {
+            color: rgb(209, 88, 44);
+            margin: 20px;
+        }
+
+        div.entrada {
+            margin: 20px;
+        }
+
+        div.identificador {
+            margin: 20px 0px 50px 0px;
+        }
+
+        table#entra, table#saida {
+            margin: auto;
+            width: 200px;
+        }
+
+        table#saida {
+            width: 500px;
+        }
+
+        input {
+            border-radius: 7px;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            height: 30px;
+            width: 70px;
+            font-size: 16pt;
+            font-weight: bold;
+            color: rgb(31, 90, 31);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exercicios com IF e SWITCH</h1>
+    <div class="entrada">
+        <table id="entra">
+            <tr>
+                 <th>Código</th>
+                 <th>Qntd</th>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="identificador"">
+        <p id="um">--Informe o código primeiro--</p>
+        <p id="dois">200 - 201 - 202 - 203</p>
+    </div>
+    <div class="tabela">
+        --------------------------------------
+        <table id="saida">
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Qntd</th>
+            <th>Valor(und)</th>
+            <th>TOTAL</th>
+            <tr>
+                <td>200</td>
+                <td>Camiseta</td>
+                <td>2</td>
+                <td>25,00</td>
+                <td>50,00</td>
+            </tr>
+        </table>
+    </div>
+    <script src="scripts/script-ex.js"></script>
+</body>
+</html>
