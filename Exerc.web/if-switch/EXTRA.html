@@ -27,11 +27,11 @@
         }
 
         div.entrada {
-            margin: 20px;
+            margin: 30px;
         }
 
         div.identificador {
-            margin: 20px 0px 50px 0px;
+            margin: 20px 0px 80px 0px;
         }
 
         table#entra, table#saida {
@@ -47,6 +47,9 @@
             border-radius: 7px;
             font-family: "Poppins", sans-serif;
             text-align: center;
+        }
+
+        input#cod, input#qntd {
             height: 30px;
             width: 70px;
             font-size: 16pt;
@@ -65,17 +68,18 @@
                  <th>Qntd</th>
             </tr>
             <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td><input type="number" name="cod" id="cod" min="200" max="203"></td>
+                <td><input type="number" name="qntd" id="qntd" min="1" max="999" value=""></td>
             </tr>
         </table>
+        <p><input style="width: 100px; margin-top: 10px" type="button" value="PROCURAR"></p>
     </div>
     <div class="identificador"">
         <p id="um">--Informe o código primeiro--</p>
         <p id="dois">200 - 201 - 202 - 203</p>
     </div>
     <div class="tabela">
-        --------------------------------------
+        ------------------------------------------------------
         <table id="saida">
             <th>Código</th>
             <th>Descrição</th>
@@ -83,13 +87,14 @@
             <th>Valor(und)</th>
             <th>TOTAL</th>
             <tr>
-                <td>200</td>
-                <td>Camiseta</td>
-                <td>2</td>
-                <td>25,00</td>
-                <td>50,00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
+        ------------------------------------------------------
     </div>
     <script src="scripts/script-ex.js"></script>
 </body>
