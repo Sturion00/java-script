@@ -30,15 +30,18 @@
 <body>
     <h1>Exercicios com IF e SWITCH</h1>
     <div class="entrada">
-        <p>Verificador de Múltiplos</p>
-        <p>Número 1: <input type="number" name="txt1" id="txt1" min="0"></p>
-        <p>Número 2: <input type="number" name="txt2" id="txt2" min="0"></p>
-        <p><input type="button" value="LIMPAR" onclick="limpar()"> <input type="button" value="ANALISAR" onclick="analisar(); vazio()"></p>
+        <p>Resultado: <select required name="txts" id="txts">
+            <option value="">--Selecione uma--</option>
+            <option value="0">Ganhou</option>
+            <option value="1">Perdeu</option>
+            <option value="2">Empatou</option>
+        </select></p>
+        <p><input type="button" value="ANALISAR" onclick="analisar()"></p>
     </div>
     <div class="saida">
         <p id="um">--Informe os números--</p>
         <p id="dois"></p>
     </div>
-    <script src="scripts/script07.js"></script>
+    <script src="scripts/script08.js"></script>
 </body>
 </html>
