@@ -16,8 +16,8 @@ function identItem() {
         203: 'Saia'
     }
     
-    alert(itens[codeValue] || 'Código Invalido')
-    return itens[codeValue] || 'Código Invalido'
+    //alert(itens[codeValue] || 'Código Invalido')
+    return itens[codeValue] || null
 }
 
 function identValor() {
@@ -35,10 +35,19 @@ function identValor() {
         203: 55
     }
     
-    const preUnit = precos[codeValue]
+    let preUnit = precos[codeValue]
 
-    alert(preUnit * qntdValue)
+    //alert(preUnit * qntdValue)
     return preUnit * qntdValue
+}
+
+function retorno() {
+    document.getElementById('codi').innerHTML = code.value.trim()
+    document.getElementById('desc').innerHTML = identItem()
+    document.getElementById('quant').innerHTML = qntd.value.trim()
+
+    document.getElementById('total').innerHTML = identValor()
+
 }
 
 function limpar() {
