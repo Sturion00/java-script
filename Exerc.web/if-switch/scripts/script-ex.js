@@ -1,12 +1,12 @@
 code = document.getElementById('cod')
 qntd = document.getElementById('qntd')
-codeValue = code.value.trim()
-qntdValue = qntd.value.trim()
 
 function identItem() {
+    const codeValue = code.value.trim()
     
     if (!codeValue) {
         alert('Insira um código.')
+        return null
     }
     
     itens = {
@@ -16,12 +16,15 @@ function identItem() {
         203: 'Saia'
     }
     
+    alert(itens[codeValue] || 'Código Invalido')
     return itens[codeValue] || 'Código Invalido'
 }
 
-function identPreco() {
+function identValor() {
+    const codeValue = code.value.trim()
+    let qntdValue = Number(qntd.value.trim())
 
-    if (qntdValue == 0 ) {
+    if (!qntdValue || qntdValue <= 0) {
         qntdValue = 1
     }
 
@@ -31,10 +34,12 @@ function identPreco() {
         202: 45,
         203: 55
     }
+    
+    const preUnit = precos[codeValue]
 
-    return precos[codeValue] || ''
+    alert(preUnit * qntdValue)
+    return preUnit * qntdValue
 }
-
 
 function limpar() {
     code.value = ''
