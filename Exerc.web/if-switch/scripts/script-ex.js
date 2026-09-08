@@ -1,21 +1,42 @@
-function identificar() {
-    code = document.getElementById('cod')
+code = document.getElementById('cod')
+qntd = document.getElementById('qntd')
+codeValue = code.value.trim()
+qntdValue = qntd.value.trim()
 
-    if (!code.value || code.value <= 0) {
-        return 'Insira um código válido'
+function identItem() {
+    
+    if (!codeValue) {
+        alert('Insira um código.')
     }
-
-    const itens = {
+    
+    itens = {
         200: 'Camisa',
         201: 'Calça',
         202: 'Jaqueta',
         203: 'Saia'
     }
     
-    return itens[code] || 'Código Invalido'
+    return itens[codeValue] || 'Código Invalido'
 }
 
-function procurar() {
-  const item = identificar();
-  alert(item); // ou exibir em outro lugar da página
+function identPreco() {
+
+    if (qntdValue == 0 ) {
+        qntdValue = 1
+    }
+
+    precos = {
+        200: 25,
+        201: 35,
+        202: 45,
+        203: 55
+    }
+
+    return precos[codeValue] || ''
+}
+
+
+function limpar() {
+    code.value = ''
+    qntd.value = ''
 }
