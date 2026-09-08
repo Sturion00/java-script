@@ -17,7 +17,7 @@ function identItem() {
     }
     
     //alert(itens[codeValue] || 'Código Invalido')
-    return itens[codeValue] || null
+    return itens[codeValue] || alert('Código digitado inválido')
 }
 
 function identValor() {
@@ -35,22 +35,33 @@ function identValor() {
         203: 55
     }
     
-    let preUnit = precos[codeValue]
-
-    //alert(preUnit * qntdValue)
-    return preUnit * qntdValue
+    //alert(precos[codeValue])
+    return precos[codeValue] || null
 }
 
 function retorno() {
+    const total = identValor() * qntd.value.trim()
+    const quantidade = qntd.value.trim()
+
+    if (!quantidade || quantidade <= 0) {
+        quantidade = 1
+    }
+
     document.getElementById('codi').innerHTML = code.value.trim()
     document.getElementById('desc').innerHTML = identItem()
-    document.getElementById('quant').innerHTML = qntd.value.trim()
-
-    document.getElementById('total').innerHTML = identValor()
+    document.getElementById('quant').innerHTML = quantidade
+    document.getElementById('valor').innerHTML =  identValor().toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    document.getElementById('total').innerHTML =  total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
 
 }
 
 function limpar() {
-    code.value = ''
-    qntd.value = ''
+    code.value = null
+    qntd.value = null
+
+    document.getElementById('codi').innerHTML = null
+    document.getElementById('desc').innerHTML = null
+    document.getElementById('quant').innerHTML = null
+    document.getElementById('valor').innerHTML = null
+    document.getElementById('total').innerHTML = null
 }
